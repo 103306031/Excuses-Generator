@@ -6,7 +6,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//load.sheetsu.com"></script>
     <script type="text/javascript">
-      /* 資料google sheet：https://reurl.cc/24eqX6 */
+
+      $(document).ready(function() {
+              /* 資料google sheet：https://reurl.cc/24eqX6 */
       var url = "https://sheetsu.com/apis/v1.0su/4149bd903111";
       var count = 0;
       var dataArray;
@@ -24,7 +26,6 @@
           "gen_btn": "產生藉口"
         }
       };
-      $(document).ready(function() {
         $(".gen_btn").attr("disabled", "disabled");
         $.ajax({
           url: url,
