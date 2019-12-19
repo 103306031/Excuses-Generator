@@ -10,14 +10,14 @@ var lang_data = $.getJSON("js/translate.json", function(data) {
 });
 $(document).ready(function() {
   $(".gen_btn").attr("disabled", "disabled");
-  $.getJSON(url, function(data) {
-    count = (data.feed.entry.length-3) / 3;
-    for (var j = 4; j <= data.feed.entry.length; j+=3){
-      Excuse.push(data.feed.entry[j].gs$cell.$t);
-      Excuse_EN.push(data.feed.entry[j+1].gs$cell.$t);
-    }
-    $(".gen_btn").removeAttr("disabled");
-  });
+//   $.getJSON(url, function(data) {
+//     count = (data.feed.entry.length-3) / 3;
+//     for (var j = 4; j <= data.feed.entry.length; j+=3){
+//       Excuse.push(data.feed.entry[j].gs$cell.$t);
+//       Excuse_EN.push(data.feed.entry[j+1].gs$cell.$t);
+//     }
+//     $(".gen_btn").removeAttr("disabled");
+//   });
   setLang();
 
   $(".lang_btn").click(function() {
@@ -48,4 +48,13 @@ function getExcuse(i) {
   } else if (lang == "en") {
     $(".ans").text(Excuse_EN[i]);
   }
+}
+
+function getJSONData(data){
+  count = data.feed.entry.length;
+    for (var j = 0; j <= count; j++){
+      Excuse.push(data.feed.entry[j].gsx$excuse.$t);
+      Excuse_EN.push(data.feed.entry[j+1].gsx$excuseen.$t);
+    }
+    $(".gen_btn").removeAttr("disabled");
 }
