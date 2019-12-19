@@ -5,7 +5,7 @@ var Excuse = [];
 var Excuse_EN = [];
 var i;
 var lang = "en";
-var lang_data = $.getJSON("./translate.json", function(json) {
+var lang_data = $.getJSON("js/translate.json", function(json) {
     return json; // this will show the info it in firebug console
 });
 // var lang_data = {
