@@ -1,6 +1,7 @@
 /* 資料google sheet：https://reurl.cc/24eqX6 */
 var url = "https://spreadsheets.google.com/feeds/cells/127SD2az98sPOoeV2Sk4VunaZV5YUZTOQaqfMysw3qvU/1/public/values?alt=json";
 var count = 0;
+var jsondata;
 var Excuse = [];
 var Excuse_EN = [];
 var i;
@@ -51,6 +52,8 @@ function getExcuse(i) {
 }
 
 function getJSONData(data){
+    jsondata = data;
+    console.log(data);
   count = data.feed.entry.length;
     for (var j = 0; j <= count; j++){
       Excuse.push(data.feed.entry[j].gsx$excuse.$t);
