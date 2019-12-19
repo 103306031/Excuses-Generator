@@ -1,0 +1,12 @@
+{
+  "en": {
+    "title": "Excuses Generator",
+    "lang_btn": "中文",
+    "gen_btn": "Generate"
+  },
+  "zh-tw": {
+    "title": "藉口產生器",
+    "lang_btn": "English",
+    "gen_btn": "產生藉口"
+  }
+}
