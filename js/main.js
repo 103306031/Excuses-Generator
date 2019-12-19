@@ -5,21 +5,9 @@ var Excuse = [];
 var Excuse_EN = [];
 var i;
 var lang = "en";
-var lang_data = $.getJSON("js/translate.json", function(json) {
-    return json; // this will show the info it in firebug console
+var lang_data = $.getJSON("js/translate.json", function(data) {
+    return data.responseJSON;
 });
-// var lang_data = {
-//   "en": {
-//     "title": "Excuses Generator",
-//     "lang_btn": "中文",
-//     "gen_btn": "Generate"
-//   },
-//   "zh-tw": {
-//     "title": "藉口產生器",
-//     "lang_btn": "English",
-//     "gen_btn": "產生藉口"
-//   }
-// };
 $(document).ready(function() {
   $(".gen_btn").attr("disabled", "disabled");
   $.getJSON(url, function(data) {
