@@ -6,12 +6,12 @@ var Excuse_EN = [];
 var i;
 var lang = "en";
 var lang_data = $.getJSON("js/translate.json", function(data) {
-    return data.responseJSON;
+    return data.responseJSON.responseJSON;
 });
 $(document).ready(function() {
   $(".gen_btn").attr("disabled", "disabled");
   $.getJSON(url, function(data) {
-    count = data.feed.entry.length-3;
+    count = data.feed.entry.length;
     for (var j = 0; j < count; j++){
       Excuse.push(data.feed.entry[j].gsx$excuse.$t);
       Excuse_EN.push(data.feed.entry[j].gsx$excuseen.$t);
