@@ -1,0 +1,39 @@
+html {
+  text-align: center;
+}
+.container {
+   width: 100%;
+   height: 100vh;
+}
+.answer {
+   margin: 5vh;
+   padding: 5vh 5vw;
+   background-color: #f3f3f3;
+}
+.gen_btn {
+   margin: auto;
+   width: 50vh;
+   padding: 20px;
+   min-width: 100px;
+   background-color: #fc0;
+   border: none;
+}
+.gen_btn:hover {
+   background-color: #ffc100;
+}
+.gen_btn:disabled {
+   background-color: #ffdb4d;
+}
+.lang_btn {
+   margin: auto;
+   padding: 4px;
+   min-width: 40px;
+   background-color: transparent;
+   border: none;
+   font-size: 0.8em;
+   text-decoration: none;
+   color: black;
+}
+.lang_btn:focus {
+   outline: none;
+}
