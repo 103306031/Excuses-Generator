@@ -6,8 +6,9 @@ var Excuse_EN = [];
 var i;
 var lang = "en";
 var lang_data = $.getJSON("js/translate.json", function(data) {
-    return data.responseJSON.responseJSON;
+    return data.responseJSON;
 });
+lang_data = lang_data.responseJSON;
 $(document).ready(function() {
   $(".gen_btn").attr("disabled", "disabled");
   $.getJSON(url, function(data) {
